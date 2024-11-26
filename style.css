@@ -1,0 +1,208 @@
+body {
+    font-family:'Monaco', Monospace;
+    background: #424242;
+
+}
+
+hr {
+    height: 2px;
+    color:#229799; 
+    background-color:#229799;
+    border-color: #229799;
+}
+
+.chat-box { 
+    background: #424242;
+    width: 500px; 
+    margin: 0 auto;
+    border-radius: 20px; 
+    border: 3px solid #229799; 
+    padding: 10px; 
+}
+
+.messages { 
+    color: #F5F5F5;
+    font-size: 17px;
+    height: 770px; 
+    overflow-y: auto; 
+    margin-bottom: 10px; 
+    border: 0px solid; 
+    padding: 5px; 
+}
+
+/* Ziņu rakstīšanas laukam */
+.input-area {
+    display: flex; /* Flexbox to align items horizontally */
+    align-items: center; /* Center align items vertically */
+    margin-top: 10px; /* Space above the input area */
+}
+
+textarea {
+    width: 70%; /* Width of the textarea */
+    padding: 10px; /* Padding inside the textarea */
+    border: 1px solid #ccc; /* Border style */
+    border-radius: 5px; /* Rounded corners */
+    resize: none; /* Prevent resizing of the textarea */
+}
+
+button, #logoff {
+    padding: 10px 15px; /* Padding for buttons */
+    margin-left: 2px; /* Space between buttons */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    font-size: 16px; /* Font size */
+}
+
+/* Style for the send button */
+button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Style for the logout button */
+#logoff, #openPopup {
+    font-family:'Monaco', Monospace;
+    background-color: #229799; /* Red background */
+    color: white; /* White text */
+    transition: background-color 0.3s, transform 0.3s; /* Transition for hover effect */
+}
+
+#logoff, #openPopup:hover {
+    background-color: #1D9D84; /* Tumšāka krāsa, kad uz to peles kursoru virsū */
+    transform: translateY(-2px); /* Poga nedaudz paceljas */
+}
+
+#logoff, #openPopup:active {
+    transform: translateY(0); /* Atgriežas sākotnējā pozīcijā, kad nospiesta */
+}
+
+#popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+    z-index: 1000; /* Sit on top */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+}
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+.close-btn {
+    cursor: pointer;
+    color: red;
+    float: right;
+}
+
+.input-area textarea {
+    font-family:'Monaco', Monospace;
+    font-size: 17px;
+    width: 90%; /* Platums */
+    padding: 0px; /* Iekšējā atstarpe */
+    border: 1px solid #229799; /* Rāmis */
+    border-radius: 5px; /* Stūru noapaļošana */
+    background: #2C2C2C; /* Fons */
+    color: #F5F5F5; /* Teksta krāsa */
+    resize: none; /* Izslēdz iespējamo mainīšanu */
+}
+
+/* Ritināšanas josla ziņu rakstīšanas laukā (Webkit) */
+.input-area textarea::-webkit-scrollbar {
+    width: 12px; /* Platums */
+}
+
+.input-area textarea::-webkit-scrollbar-track {
+    background: #2C2C2C; /* Fons */
+    border-radius: 10px; /* Fona stūru noapaļošana */
+}
+
+.input-area textarea::-webkit-scrollbar-thumb {
+    background: #229799; /* Ritināšanas joslas roktura krāsa */
+    border-radius: 10px; /* Roktura stūru noapaļošana */
+}
+
+.input-area textarea::-webkit-scrollbar-thumb:hover {
+    background: #1D9D84; /* Roktura krāsa, kad peles kursoru virsū */
+}
+
+/* Ritināšanas joslas stils Firefox */
+.input-area textarea {
+    scrollbar-width: thin; /* Ritināšanas joslas platums (šaurā) */
+    scrollbar-color: #229799 #2C2C2C; /* Roktura un fona krāsas */
+}
+
+
+/* Ritināšanas joslas stils visām pārlūkprogrammām (Webkit) */
+.messages::-webkit-scrollbar {
+    width: 12px; /* Platums */
+}
+
+.messages::-webkit-scrollbar-track {
+    background: #2C2C2C; /* Fons */
+    border-radius: 10px; /* Ritināšanas joslas fona stūru noapaļošana */
+}
+
+.messages::-webkit-scrollbar-thumb {
+    background: #229799; /* Ritināšanas joslas roktura krāsa */
+    border-radius: 10px; /* Roktura stūru noapaļošana */
+}
+
+.messages::-webkit-scrollbar-thumb:hover {
+    background: #1D9D84; /* Roktura krāsa, kad peles kursoru virsū */
+}
+
+/* Firefox */
+.messages {
+    scrollbar-width: thin; /* Ritināšanas joslas platums (šaurā) */
+    scrollbar-color: #229799 #2C2C2C; /* Roktura un fona krāsas */
+}
+
+/* Ritināšanas joslas stils Edge un Internet Explorer */
+.messages {
+    -ms-overflow-style: -ms-autohiding-scrollbar; /* Automātiskā slēpšana */
+}
+
+.messages p {
+    word-wrap: break-word; /* Laika, ja vārds pārsniedz platumu, tas tiek sadalīts uz jaunu rindu */
+    margin: 5px 0; /* Pievieno nedaudz atstarpi starp ziņojumiem */
+}
+
+
+/* Sūtīšanas pogas stils */
+.input-area button {
+    font-family:'Monaco', Monospace;
+    background-color: #229799; /* Fona krāsa */
+    color: #F5F5F5; /* Teksta krāsa */
+    border: none; /* Bez rāmja */
+    border-radius: 5px; /* Stūru noapaļošana */
+    padding: 10px 15px; /* Iekšējā atstarpe (vertikālā, horizontālā) */
+    cursor: pointer; /* Kursoram mainās forma uz roku */
+    transition: background-color 0.3s, transform 0.2s; /* Pārejas efekti */
+}
+
+/* Poga, kad uz to peles kursoram virsū */
+.input-area button:hover {
+    background-color: #1D9D84; /* Tumšāka krāsa, kad uz to peles kursoru virsū */
+    transform: translateY(-2px); /* Poga nedaudz paceljas */
+}
+
+/* Poga, kad tiek nospiesta */
+.input-area button:active {
+    transform: translateY(0); /* Atgriežas sākotnējā pozīcijā, kad nospiesta */
+}
+
+.time {
+    font-size: 12px; /* Samazināts laika fonta izmērs */
+    color: #B0B0B0; /* Gaišāka krāsa, lai atšķirtu no ziņas */
+}
